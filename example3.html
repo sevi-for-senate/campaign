@@ -32,6 +32,7 @@
             color: #F9E0D9;
             margin: 20px;
         }
+
         #exampleInputEmail1::placeholder {
             color: #F9E0D9;
         }
@@ -83,6 +84,16 @@
             background-color: #123180;
             color: #F9E0D9;
         }
+
+        @media screen and (max-width: 768px){
+            #intro-text{
+                font-size: 600% !important;
+            }
+            #youtube{
+                width: 360px;
+                height: 195px;
+            } 
+        }
     </style>
 </head>
 
@@ -94,9 +105,11 @@
             <button type="button" class="btn" style="background-color: #e17033"><a
                     href="https://secure.actblue.com/donate/seviforsenate" target="_blank">Donate</a></button>
         </nav>
-        <h1 style="color: #F9E0D9; font-size: 800%; text-shadow: 0 0 50px #e17033;">Sevi Alvarez<br>
+        <h1 style="color: #F9E0D9; font-size: 800%; text-shadow: 0 0 50px #e17033;" id="intro-text">Sevi Alvarez<br>
             South Carolina Senate District 11</h1>
-        <p style="color: #F9E0D9; font-size: 100%; text-shadow: 0 0 50px #e17033; position: absolute; bottom: 0; right: 0;">Committee to Elect Sevi Alvarez<br>
+        <p
+            style="color: #F9E0D9; font-size: 100%; text-shadow: 0 0 50px #e17033; position: absolute; bottom: 0; right: 0;">
+            Committee to Elect Sevi Alvarez<br>
             PO Box 2156<br>
             Spartanburg, SC 29304-2156>
     </div>
@@ -146,7 +159,7 @@
         <div class="row">
             <div class="col">
                 <h3 style="color: #123180; font-weight: bolder;">Campaign Video</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/u3Wq3Bs7lUI" frameborder="0"
+                <iframe id="youtube" width="560" height="315" src="https://www.youtube.com/embed/u3Wq3Bs7lUI" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
             </div>
