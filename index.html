@@ -8,6 +8,31 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
+        body,
+        html {
+            height: 100%;
+        }
+
+        .parallax {
+            /* The image used */
+            background-image: url('./images/Speaking\ at\ Delegation\ Meeting.jpg');
+
+            /* Full height */
+            height: 100%;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        a,
+        a:visited {
+            color: #F9E0D9;
+            margin: 20px;
+        }
+
         #exampleInputEmail1::placeholder {
             color: #F9E0D9;
         }
@@ -28,6 +53,7 @@
             min-height: 500px;
             margin: auto;
             object-fit: cover;
+            background-position: center;
         }
 
         p {
@@ -54,24 +80,46 @@
         a:visited {
             color: #F9E0D9;
         }
+
+        .card {
+            /* background-color: #123180; */
+            color: #A64253;
+            text-align: left;
+            /* border: solid #123180; */
+            background-color: #F9E0D9;
+        }
+
+        @media screen and (max-width: 768px) {
+            #intro-text {
+                font-size: 400% !important;
+            }
+
+            #youtube {
+                width: 360px;
+                height: 195px;
+            }
+        }
     </style>
 </head>
 
 <body style="background-color: #F9E0D9;">
-    <div class="container text-center">
-        <div class="row">
-            <div class="col">
-                <nav class="navbar navbar-light bg-light justify-content-between"
-                    style="background-color: #F9E0D9 !important;">
-                    <button type="button" class="btn btn-danger" style="background-color: #123180"><a
-                            href="#issues">Issues</a></button>
-                    <a class="nav-link" href="#" style="color: #A64253; font-weight: bolder;">Sevi Alvarez for South
-                        Carolina Senate District 11</a>
-                    <button type="button" class="btn btn-primary" style="background-color: #e17033"><a
-                            href="https://secure.actblue.com/donate/seviforsenate" target="_blank">Donate</a></button>
-                </nav>
-            </div>
-        </div>
+    <div class="parallax">
+        <nav class="navbar navbar-light bg-light justify-content-end" style="background:transparent !important;">
+            <a href="#savi">Meet Sevi</a>
+            <a href="#issues">Issues</a>
+            <button type="button" class="btn" style="background-color: #e17033"><a
+                    href="https://secure.actblue.com/donate/seviforsenate" target="_blank">Donate</a></button>
+        </nav>
+        <h1 style="color: #F9E0D9; font-size: 800%; text-shadow: 0 0 50px #e17033;" id="intro-text">Sevi Alvarez<br>
+            South Carolina Senate District 11</h1>
+        <p
+            style="color: #F9E0D9; font-size: 100%; text-shadow: 0 0 50px #e17033; position: absolute; bottom: 0; right: 0;">
+            Committee to Elect Sevi Alvarez<br>
+            PO Box 2156<br>
+            Spartanburg, SC 29304-2156>
+    </div>
+
+    <div class="container text-center" id="savi">
         <div class="row">
             <div class="col">
                 <!-- Carousel wrapper -->
@@ -116,8 +164,9 @@
         <div class="row">
             <div class="col">
                 <h3 style="color: #123180; font-weight: bolder;">Campaign Video</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/u3Wq3Bs7lUI" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                <iframe id="youtube" width="560" height="315" src="https://www.youtube.com/embed/u3Wq3Bs7lUI"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
                 </iframe>
             </div>
         </div>
@@ -129,78 +178,75 @@
 
         <a class="" href="https://www.facebook.com/" target="_blank"><img class=""
                 src="https://joebiden.com/wp-content/plugins/dem-online-theme-extension/img/facebook-blue.svg" "=""></a> -->
-        <div class=" row">
-            <div class="col">
-                <div class="row">
-                    <div class="col" id="issues">
-                        <h3 style="color: #123180; font-weight: bolder;">On the Issues</h3>
-                        <h4>Medical Freedom</h4>
-                        <p id="answer-1">I believe that abortion is the civil rights issue of our time. Safe,
+        <div class="row" id="issues">
+            <div class="col-sm-4 d-flex align-items-stretch">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Medical Freedom</h5>
+                        <p class="card-text">I believe that abortion is the civil rights issue of our time. Safe,
                             accessible, and legal abortions are of paramount importance in our state. More than that,
                             though, I believe that EVERY South Carolinian has a God-given right to make their own
                             medical decisions, without the state butting in and telling them what they can and can't do.
                             When I was receiving cancer treatment, no one told me that this or that medication was
                             legal, or that a procedure was banned for reasons irrelevant to my own wellbeing. I want
-                            those rights to extend to everyone.
-                        </p>
+                            those rights to extend to everyone.</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <h4>Expand Medicaid</h4>
-                        <p id="answer-2">I had good insurance as I battled cancer, but many South Carolinians are not so
+            </div>
+            <div class="col-sm-4 d-flex align-items-stretch">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Expand Medicaid</h5>
+                        <p class="card-text">I had good insurance as I battled cancer, but many South Carolinians are
+                            not so
                             lucky. Hundreds of thousands have no coverage at all, and many more would still be
                             bankrupted by a cancer, a car crash, or even a diabetes diagnosis. It is imperative that
                             South Carolina expand Medicaid, bringing much-needed coverage and resources for those who
-                            need it the most.
-                        </p>
+                            need it the most.</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <h4>Access to Childcare</h4>
-                        <p id="answer-3">There is a childcare crisis in the United States, and South Carolina is among
+            </div>
+            <div class="col-sm-4 d-flex align-items-stretch">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Access to Childcare</h5>
+                        <p class="card-text">There is a childcare crisis in the United States, and South Carolina is
+                            among
                             the worst offenders. Daycare for infants and toddlers can cost upwards of $900 per month;
                             meanwhile, the median income for childcare workers is barely higher than minimum wage. This
                             has caused a deficit of talent that results in unreasonable waiting lists, especially for
                             parents who are caught off guard by it. We must work toward subsidizing some, if not all, of
                             these costs, and increasing the minimum wage - at least for daycare workers, if not for
-                            everyone in our state.
-                        </p>
+                            everyone in our state.</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <h4>Improve Infrastructure</h4>
-                        <p id="answer-4">Spartanburg County recently voted to extend a penny sales tax, and that will go
-                            a long way toward improving the roads around here. However, infrastructure is about more
-                            than just pavement and bridges. We need to ensure that our streets and neighborhoods are
+            </div>
+            <div class="col-sm-4 d-flex align-items-stretch">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Improve Infrastructure</h5>
+                        <p class="card-text">We need to ensure that our streets and neighborhoods are
                             safe and walkable. We need to speed up housing construction in some places and slow it down
                             in others, and we need at least some of it to be affordable. We need to get rid of outdated
                             and unsafe structures in neighborhoods that have been neglected for too long. I want to work
                             hard to direct some much-needed funding into Spartanburg County for all these purposes and
-                            more.
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <h4>Incorporate Boiling Springs Into a Municipality</h4>
-                        <p id="answer-5">Did you know that Boiling Springs isn't actually a city? That's why development
-                            has been so out of control lately, and it's a big reason why traffic is so bad in that area.
-                            The folks who live in Boiling Springs need better representation, and they need the ability
-                            to create zoning ordinances that will slow the uncontrolled growth over there to a more
-                            manageable level. And they're not the only ones who will benefit; the creation of city
-                            limits will help prevent urban sprawl from overtaking the rural character of Northern
-                            Spartanburg County, and giving Boiling Springs its own police force will reduce the burden
-                            on the Sheriff's Office. Insurance premiums will also go down, not to mention more
-                            affordable services such as trash and recycling pickup. This has been long overdue for
-                            years, and whether elected or not, I intend to lead the charge on getting this ball rolling.
-                        </p>
+                            more.</p>
                     </div>
                 </div>
             </div>
-
+            <div class="col-sm-4 d-flex align-items-stretch">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Incorporate Boiling Springs Into a Municipality</h5>
+                        <p class="card-text">Did you know that Boiling Springs isn't actually a city? That's why
+                            development
+                            has been so out of control lately, and it's a big reason why traffic is so bad in that area.
+                            The folks who live in Boiling Springs need better representation, and they need the ability
+                            to create zoning ordinances that will slow the uncontrolled growth over there to a more
+                            manageable level.</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="row">
             <div class="col">
@@ -226,6 +272,7 @@
                     Spartanburg, SC 29304-2156</p>
             </div>
         </div>
+    </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
